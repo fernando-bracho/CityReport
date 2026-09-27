@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">CityReport</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Pantalla de bienvenida (antes Hello CityReport) -->
+    <string name="bienvenida_titulo">Bienvenido a CityReport</string>
+    <string name="bienvenida_boton">Ver incidencias</string>
+
+    <!-- Pantalla Home (lista de incidencias) -->
+    <string name="home_titulo">Incidencias reportadas</string>
+    <string name="home_boton_agregar">Reportar nueva incidencia</string>
+
+    <!-- Pantalla Crear Incidencia -->
+    <string name="crear_titulo_pantalla">Nueva incidencia</string>
+    <string name="crear_campo_titulo">Título</string>
+    <string name="crear_campo_descripcion">Descripción</string>
+    <string name="crear_boton_guardar">Guardar incidencia</string>
+    <string name="crear_error_validacion">Completa el título y la descripción para guardar.</string>
+
+    <!-- Pantalla Detalle de Incidencia -->
+    <string name="detalle_descripcion_label">Descripción</string>
+    <string name="detalle_no_encontrado">No se encontró información de esta incidencia.</string>
+
+    <!-- Genérico -->
+    <string name="boton_volver">← Volver</string>
+</resources>

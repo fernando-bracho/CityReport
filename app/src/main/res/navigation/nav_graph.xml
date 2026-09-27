@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bienvenidaFragment">
+
+    <!-- Pantalla de bienvenida (Hello CityReport). No forma parte de las
+         3 pantallas navegables del flujo principal; solo es la entrada a Home. -->
+    <fragment
+        android:id="@+id/bienvenidaFragment"
+        android:name="com.example.cityreport.BienvenidaFragment"
+        android:label="@string/bienvenida_titulo"
+        tools:layout="@layout/fragment_bienvenida" >
+        <action
+            android:id="@+id/action_bienvenidaFragment_to_listaIncidenciasFragment"
+            app:destination="@id/listaIncidenciasFragment"
+            app:popUpTo="@id/bienvenidaFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- 1. HOME: lista de incidencias -->
+    <fragment
+        android:id="@+id/listaIncidenciasFragment"
+        android:name="com.example.cityreport.ListaIncidenciasFragment"
+        android:label="@string/home_titulo"
+        tools:layout="@layout/fragment_lista_incidencias" >
+        <action
+            android:id="@+id/action_listaIncidenciasFragment_to_detalleIncidenciaFragment"
+            app:destination="@id/detalleIncidenciaFragment" />
+        <action
+            android:id="@+id/action_listaIncidenciasFragment_to_crearIncidenciaFragment"
+            app:destination="@id/crearIncidenciaFragment" />
+    </fragment>
+
+    <!-- 2. CREAR INCIDENCIA -->
+    <fragment
+        android:id="@+id/crearIncidenciaFragment"
+        android:name="com.example.cityreport.CrearIncidenciaFragment"
+        android:label="@string/crear_titulo_pantalla"
+        tools:layout="@layout/fragment_crear_incidencia" />
+
+    <!-- 3. DETALLE DE INCIDENCIA -->
+    <fragment
+        android:id="@+id/detalleIncidenciaFragment"
+        android:name="com.example.cityreport.DetalleIncidenciaFragment"
+        android:label="fragment_detalle_incidencia"
+        tools:layout="@layout/fragment_detalle_incidencia" >
+        <argument
+            android:name="incidenciaId"
+            app:argType="string" />
+    </fragment>
+</navigation>
